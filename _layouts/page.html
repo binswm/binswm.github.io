@@ -98,6 +98,21 @@ layout: default
                 </section>
                 {% endif %}
 
+
+                <!-- Search -->
+                {% if site.featured-tags %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">Search</a></h5>
+                    <div id="search-container">
+                      <input type="text" id="search-input" placeholder="search...">
+					  <ul id="results-container"></ul>
+                    </div>
+                </section>
+                {% endif %}
+
+
+
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
                     <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
