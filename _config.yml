@@ -100,7 +100,7 @@ service-worker: true
 friends: [
     {
         title: "Behance",
-        href: "https://www.behance.net/binswm"
+        href: \"https://www.behance.net/binswm\"
     },{
         title: "Instagram",
         href: "https://www.instagram.com/binswm0"
