@@ -3,7 +3,7 @@ title: Bin Blog
 SEOTitle: Bin Blog
 header-img: img/color_black.png
 email: binswms@gmail.com
-description: "Every failure is leading towards success."
+description: "乱七八糟的个人笔记."
 keyword: "Bin, Bin Blog"
 url: "http://binswm.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -57,7 +57,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+# disqus_username: bin
 
 # Gitalk
 gitalk:
@@ -86,7 +86,7 @@ gitalk:
 
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
 
 
 
