@@ -7021,26 +7021,57 @@ button.close {
 
 /*回到顶部按钮样式*/
 
-#backtop a { /* back to top button */
-    text-align: center;
-    line-height: 35px;
-    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
-    font-size: 16px;
-    width:40px;
-    height: 40px;
-    position: fixed;
-    bottom: 40px; /* 小按钮到浏览器底边的距离 */
-    right: 60px; /* 小按钮到浏览器右边框的距离 */
-    color: rgba(20,20,20,0.70); /* 小按钮中文字的颜色 */
-    z-index: 1000;
-    background: rgba(242,242,242,.30); /* 小按钮底色 */
-    padding: auto; /* 小按钮中文字到按钮边缘的距离 */
-    border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 1px;
-    font-weight: bold; /* 小按钮中文字的粗细 */
-    text-decoration: none !important;
-    box-shadow:1px 2px 6px rgba(0,0,0,0.20), 0 1px 0 #ffffff inset;
+
+@media (min-width:1200px) {
+
+    #backtop a { /* back to top button */
+        text-align: center;
+        line-height: 35px;
+        font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+        font-size: 16px;
+        width:40px;
+        height: 40px;
+        position: fixed;
+        bottom: 40px; /* 小按钮到浏览器底边的距离 */
+        right: 60px; /* 小按钮到浏览器右边框的距离 */
+        color: rgba(20,20,20,0.70); /* 小按钮中文字的颜色 */
+        z-index: 1000;
+        background: rgba(242,242,242,.30); /* 小按钮底色 */
+        padding: auto; /* 小按钮中文字到按钮边缘的距离 */
+        border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 1px;
+        font-weight: bold; /* 小按钮中文字的粗细 */
+        text-decoration: none !important;
+        box-shadow:1px 2px 6px rgba(0,0,0,0.20), 0 1px 0 #ffffff inset;
+    }
+
+}
+
+@media (max-width:1199px) {
+
+    #backtop a { /* back to top button */
+        text-align: center;
+        line-height: 35px;
+        font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+        font-size: 16px;
+        width:15px;
+        height: 15px;
+        position: fixed;
+        bottom: 6px; /* 小按钮到浏览器底边的距离 */
+        right: 10px; /* 小按钮到浏览器右边框的距离 */
+        color: rgba(20,20,20,0.0); /* 小按钮中文字的颜色 */
+        z-index: 1000;
+        background: rgba(242,242,242,.0); /* 小按钮底色 */
+        padding: auto; /* 小按钮中文字到按钮边缘的距离 */
+        border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 1px;
+        font-weight: bold; /* 小按钮中文字的粗细 */
+        text-decoration: none !important;
+        box-shadow:1px 2px 6px rgba(0,0,0,0.0), 0 1px 0 #ffffff inset;
+    }
+
 }
 
 #backtop a:hover { /* 小按钮上有鼠标悬停时 */
