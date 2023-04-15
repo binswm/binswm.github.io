@@ -149,7 +149,7 @@ layout: default
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}" target="_blank" rel="noopener noreferrer">{{friend.title}}</a></li>
+                        <li><a href="{{friend.href}}" target="_blank" rel="noopener noreferrer"><img border="0" src="{{friend.img}}"/></a></li>
                     {% endfor %}
                 </ul>
                 {% endif %}
