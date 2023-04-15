@@ -15,7 +15,7 @@ description: "乱七八糟的个人笔记."
         </h3>
         {% endif %}
         <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+            {{ post.content | strip_html | truncate:80 }}  <!-- 此处truncate:的数值为限制首页文章目录展示预览正文文本的字符数量 -->
         </div>
     </a>
     <p class="post-meta">

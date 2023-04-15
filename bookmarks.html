@@ -1,0 +1,68 @@
+---
+title: Bookmarks
+layout: default
+description: 网页书签
+---
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- 标签云 -->
+	   <!-- <div id='tag_cloud' class="tags">
+				{% for tag in site.tags %}
+				<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+				{% endfor %}
+			</div> -->
+
+			<h3>LAN</h3>
+			<hr />
+
+			<div id='tag_cloud' class="tags">
+
+				<a href="http://192.168.50.109:81/" title="bin1621 Homepage" target="_blank" rel="noopener noreferrer" style="background-color: #333333;">bin1621 Homepage</a>
+
+			</div>
+
+
+			<h3>Tailscale</h3>
+			<hr />
+
+			<div id='tag_cloud' class="tags">
+
+				<a href="http://100.125.227.77:81/" title="bin1621 Homepage" target="_blank" rel="noopener noreferrer" style="background-color: #333333;">bin1621 Homepage</a>
+
+			</div>
+
+
+            <!--<blockquote class="tag-comments">
+                标签命名规范：
+                    <li>行业观察、职位、公司优先使用中文</li>
+                    <li>外国产品、术语优先使用英文</li>
+            </blockquote>-->
+
+           
+		</div>
+	</div>
+</div>
+
+<br/>
+<br/>
+
+<hr />
+
+
