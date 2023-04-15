@@ -1643,6 +1643,7 @@ ol ol,ol ul,ul ol,ul ul {
 
 .list-inline {
     padding-left: 0;
+    padding-top: 20px;
     margin-left: -5px;
     list-style: none
 }
