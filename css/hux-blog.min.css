@@ -938,7 +938,6 @@ img::-moz-selection {
     background: #D6D6D6
 }
 
-
 #tag_cloud a:hover,#tag_cloud .tag:hover,#tag_cloud a:active,#tag_cloud .tag:active {
     background-color: #0085a1!important
 }
