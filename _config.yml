@@ -1,7 +1,7 @@
 # Site settings
 title: Bin
 SEOTitle: Bin
-header-img: img/color_black.png
+header-img: img/bin_pin_128.png
 email: binswms@gmail.com
 description: "乱七八糟的个人笔记."
 keyword: "Bin, Bin Blog"
@@ -12,7 +12,7 @@ github_repo: "https://github.com/binswm/binswm.github.io.git" # you code reposit
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Bin"
-sidebar-avatar: /img/bin_pin.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/bin_pin_2048.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
