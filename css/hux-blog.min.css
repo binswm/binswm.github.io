@@ -938,6 +938,17 @@ img::-moz-selection {
     background: #D6D6D6
 }
 
+
+#tag_cloud_book a,#tag_cloud_book .tag_book {
+    font-size: 14px;
+    border: none;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    background: #333333
+}
+
+
 #tag_cloud a:hover,#tag_cloud .tag:hover,#tag_cloud a:active,#tag_cloud .tag:active {
     background-color: #0085a1!important
 }
