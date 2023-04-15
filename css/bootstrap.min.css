@@ -7022,26 +7022,27 @@ button.close {
 
  #backtop a { /* back to top button */
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
     font-size: 16px;
     width:50px;
     height: 50px;
     position: fixed;
-    bottom: 10px; /* 小按钮到浏览器底边的距离 */
+    bottom: 40px; /* 小按钮到浏览器底边的距离 */
     right: 60px; /* 小按钮到浏览器右边框的距离 */
-    color: rgb(64,120,192); /* 小按钮中文字的颜色 */
+    color: #141414; /* 小按钮中文字的颜色 */
     z-index: 1000;
     background: #fff; /* 小按钮底色 */
     padding: auto; /* 小按钮中文字到按钮边缘的距离 */
     border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
     -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
+    -webkit-border-radius: 1px;
     font-weight: bold; /* 小按钮中文字的粗细 */
     text-decoration: none !important;
-    box-shadow:0 1px 2px rgba(0,0,0,.15), 0 1px 0 #ffffff inset;
+    box-shadow:0.8px 1.8px 7px rgba(0,0,0,.70), 0 1px 0 #ffffff inset;
 }
 
 #backtop a:hover { /* 小按钮上有鼠标悬停时 */
-    background: rgba(64,120,192,0.8); /* 小按钮的底色 */
+    background: #303030; /* 小按钮的底色 */
     color: #fff; /* 文字颜色 */
 }
