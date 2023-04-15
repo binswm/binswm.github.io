@@ -1,0 +1,163 @@
+---
+layout:     post
+title:      Jekyll静态博客实现搜索功能
+subtitle:   Jekyll静态博客实现搜索功能
+date:       2023-04-15
+author:     bin
+header-img: img/color_black.png
+catalog: true
+tags:
+
+   - 博客
+   - 搜索
+---
+
+
+
+## 正文
+
+
+
+---
+
+#### 所需文件：
+<a href="https://github.com/binswm/binswm.github.io/tree/main/Backup/search_js"  target="_blank" rel="noopener noreferrer">https://github.com/binswm/binswm.github.io/tree/main/Backup/search_js</a>
+
+---
+
+
+
+#### 将所给文件按以下结构放入网页目录根目录（其中`main`为根目录名）
+
+```
+└─main
+    │─ search.json
+    │
+    └─ js
+       │─── simple-jekyll-search.js
+       └─── simple-jekyll-search.min.js
+
+```
+
+其中`search.json`可替换为`search_full`，即可实现全文搜索
+
+
+
+#### 将以下css样式放入相应的样式文件（Jekyll为`hux-blog.min.css`）
+
+```css
+
+#search-input {
+    width: 90%;
+    height: 35px;
+    color: #333;
+    background-color: rgba(227,231,236,.2);
+    line-height: 35px;
+    padding:0px 16px;
+    border: 1px solid #c0c0c0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 17px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102,175,233,.6);
+}
+#search-input:focus {
+    outline: none;
+    border-color: rgb(102, 175, 233);
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.035), 0 0 8px #0085a1;
+}
+
+```
+
+其中`search-input:focus`为进入输入状态时搜索框样式
+
+css也可以直接放入同html文件中：
+
+```html
+    <style type="text/css">
+		#search-input {
+			width: 90%;
+			height: 35px;
+			color: #333;
+			background-color: rgba(227,231,236,.2);
+			line-height: 35px;
+			padding:0px 16px;
+			border: 1px solid #c0c0c0;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 17px;
+			outline: none;
+			box-sizing: border-box;
+			box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102,175,233,.6);
+		}
+		#search-input:focus {
+			outline: none;
+			border-color: rgb(102, 175, 233);
+			background-color: #fff;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.035), 0 0 8px #0085a1;
+		}
+    </style>
+```
+
+
+
+
+
+#### 将以下html放入相应的html页面文件，此处放入`page.html`
+
+```html
+
+<!-- Search -->
+{% if site.featured-tags %}
+<section>
+	<hr class="hidden-sm hidden-xs">
+	<h5><a href="{{'/tags/' | prepend: site.baseurl }}">Search</a></h5>
+	
+	
+	
+	<div id="search-container">
+	  <input type="text" id="search-input" placeholder="search...">
+	  <ul id="results-container"></ul>
+	</div>
+	
+	<script src="/js/simple-jekyll-search.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		SimpleJekyllSearch({
+			searchInput: document.getElementById('search-input'),
+			resultsContainer: document.getElementById('results-container'),
+			json: '/search.json',
+			searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', // 文章列表模板
+			noResultsText: '没有搜索到文章', // 无搜索数据提示语
+			limit: 20, // 返回最大文章数
+			fuzzy: false // 是否模糊匹配
+		})
+	</script>
+	
+	
+	
+</section>
+{% endif %}
+
+```
+
+<br>
+
+<br>
+
+
+
+
+
+---
+
+
+
+来自：https://github.com/christian-fei/Simple-Jekyll-Search
+
+
+
+---
+
+## END
