@@ -939,7 +939,18 @@ img::-moz-selection {
 }
 
 
-#tag_cloud a,#tag_cloud_book .tag_book {
+
+
+#tag_cloud a:hover,#tag_cloud .tag:hover,#tag_cloud a:active,#tag_cloud .tag:active {
+    background-color: #0085a1!important
+}
+
+
+
+
+
+
+#tag_cloud_book a,#tag_cloud_book .tag_book {
     font-size: 14px;
     border: none;
     line-height: 28px;
@@ -948,13 +959,19 @@ img::-moz-selection {
     background: #D6D6D6 ! important
 }
 
+#tag_cloud_book {
+    margin: 20px 0 15px 0
+}
 
-
-
-
-#tag_cloud a:hover,#tag_cloud .tag:hover,#tag_cloud a:active,#tag_cloud .tag:active {
+#tag_cloud_book a:hover,#tag_cloud_book .tag:hover,#tag_cloud_book a:active,#tag_cloud_book .tag_book:active {
     background-color: #0085a1!important
 }
+
+
+
+
+
+
 
 @media only screen and (min-width:768px) {
     #tag_cloud {
