@@ -993,7 +993,21 @@ img::-moz-selection {
     }
 }
 
+/*
+.tags_book a,.tags_book .tag_book {
 
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 999em;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px
+}
+*/
 
 
 .tags_book a,.tags_book .tag_book {
@@ -1001,7 +1015,7 @@ img::-moz-selection {
     height: 20px;
     display: inline-block;
     border: 1px solid rgba(255,255,255,.8);
-    border-radius: 999em;
+    border-radius: 2px;
     padding: 0 10px;
     color: #fff;
     line-height: 24px;
