@@ -938,17 +938,39 @@ img::-moz-selection {
     background: #D6D6D6 ! important
 }
 
-
-
-
 #tag_cloud a:hover,#tag_cloud .tag:hover,#tag_cloud a:active,#tag_cloud .tag:active {
     background-color: #0085a1!important
 }
 
 
 
+@media only screen and (min-width:768px) {
+    #tag_cloud {
+        margin-bottom: 25px
+    }
+}
 
 
+
+
+
+
+
+/*---bookmarks页标签样式-----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+@media only screen and (min-width:768px) {
+    #tag-heading {
+        padding: 55px 0
+    }
+}
+
+#tag_cloud_book {
+    margin: 20px 0 15px 0
+}
 
 #tag_cloud_book a,#tag_cloud_book .tag_book {
     font-size: 14px;
@@ -959,25 +981,31 @@ img::-moz-selection {
     background: #D6D6D6 ! important
 }
 
-#tag_cloud_book {
-    margin: 20px 0 15px 0
-}
-
-#tag_cloud_book a:hover,#tag_cloud_book .tag:hover,#tag_cloud_book a:active,#tag_cloud_book .tag_book:active {
+#tag_cloud_book a:hover,#tag_cloud_book .tag:hover,#tag_cloud_book a:active,#tag_cloud_book .tag:active {
     background-color: #0085a1!important
 }
 
 
 
-
-
-
-
 @media only screen and (min-width:768px) {
-    #tag_cloud {
+    #tag_cloud_book {
         margin-bottom: 25px
     }
 }
+
+
+
+
+
+
+
+/*---bookmarks页标签样式-----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
 
 .tag-comments {
     font-size: 12px
