@@ -1011,11 +1011,11 @@ img::-moz-selection {
 
 
 .tags_book a,.tags_book .tag_book {
-    width: 50px;
-    height: 20px;
+    width: 250px;
+    height: 60px;
     display: inline-block;
     border: 1px solid rgba(255,255,255,.8);
-    border-radius: 2px;
+    border-radius: 1px;
     padding: 0 10px;
     color: #fff;
     line-height: 24px;
