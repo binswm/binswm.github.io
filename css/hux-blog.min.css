@@ -976,7 +976,7 @@ img::-moz-selection {
     font-size: 14px;
     border: none;
     text-align: center;
-    line-height: 50px;
+    line-height: 28px;
     margin: 0 2px;
     margin-bottom: 8px;
     background: #333333
@@ -1017,6 +1017,7 @@ img::-moz-selection {
     display: inline-block;
     border: 1px solid rgba(255,255,255,.8);
     border-radius: 5px;
+    line-height: 28px;
     padding: auto;
     color: #fff;
     line-height: 24px;
