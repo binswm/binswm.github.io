@@ -978,7 +978,7 @@ img::-moz-selection {
     line-height: 28px;
     margin: 0 2px;
     margin-bottom: 8px;
-    background: #D6D6D6
+    background: #333333
 }
 
 #tag_cloud_book a:hover,#tag_cloud_book .tag_book:hover,#tag_cloud_book a:active,#tag_cloud_book .tag_book:active {
@@ -993,6 +993,21 @@ img::-moz-selection {
     }
 }
 
+
+
+
+.tags_book a,.tags_book .tag_book {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 999em;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px
+}
 
 
 
