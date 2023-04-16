@@ -976,8 +976,9 @@ img::-moz-selection {
     font-size: 16px;
     border: none;
     line-height: 28px;
-    margin: 5px 2px;
+    margin: 0 2px;
     margin-bottom: 8px;
+    margin-left: auto;
     background: #333333
 }
 
