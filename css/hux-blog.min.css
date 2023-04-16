@@ -973,7 +973,7 @@ img::-moz-selection {
 }
 
 #tag_cloud_book a,#tag_cloud_book .tag_book {
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     margin: auto;
     line-height: 28px;
