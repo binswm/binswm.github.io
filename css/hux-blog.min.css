@@ -975,9 +975,8 @@ img::-moz-selection {
 #tag_cloud_book a,#tag_cloud_book .tag_book {
     font-size: 16px;
     border: none;
-    margin: auto;
     line-height: 28px;
-
+    margin: 5px 2px;
     margin-bottom: 8px;
     background: #333333
 }
