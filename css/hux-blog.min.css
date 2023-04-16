@@ -976,7 +976,7 @@ img::-moz-selection {
     font-size: 14px;
     border: none;
     text-align: center;
-    line-height: 90px;
+    line-height: 50px;
     margin: 0 2px;
     margin-bottom: 8px;
     background: #333333
