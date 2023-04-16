@@ -981,7 +981,7 @@ img::-moz-selection {
     background: #D6D6D6 ! important
 }
 
-#tag_cloud_book a:hover,#tag_cloud_book .tag:hover,#tag_cloud_book a:active,#tag_cloud_book .tag:active {
+#tag_cloud_book a:hover,#tag_cloud_book .tag_book:hover,#tag_cloud_book a:active,#tag_cloud_book .tag_book:active {
     background-color: #0085a1!important
 }
 
