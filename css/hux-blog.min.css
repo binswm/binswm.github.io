@@ -942,11 +942,101 @@ img::-moz-selection {
     background-color: #0085a1!important
 }
 
+
+
 @media only screen and (min-width:768px) {
     #tag_cloud {
         margin-bottom: 25px
     }
 }
+
+
+
+
+
+
+
+/*---bookmarks页标签样式-----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+@media only screen and (min-width:768px) {
+    #tag-heading {
+        padding: 55px 0
+    }
+}
+
+#tag_cloud_book {
+    margin: 20px 0 15px 0
+}
+
+#tag_cloud_book a,#tag_cloud_book .tag_book {
+    font-size: 16px;
+    border: none;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    background: #333333
+}
+
+#tag_cloud_book a:hover,#tag_cloud_book .tag_book:hover,#tag_cloud_book a:active,#tag_cloud_book .tag_book:active {
+    background-color: #0085a1!important
+}
+
+
+
+@media only screen and (min-width:768px) {
+    #tag_cloud_book {
+        margin-bottom: 25px
+    }
+}
+
+/*
+.tags a,.tags .tag {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 999em;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px
+}
+*/
+
+
+.tags_book a,.tags_book .tag_book {
+
+    width: 220px;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 5px;
+    padding: 10px 0;
+    color: #fff;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px
+}
+
+
+
+
+
+
+/*---bookmarks页标签样式-----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
 
 .tag-comments {
     font-size: 12px

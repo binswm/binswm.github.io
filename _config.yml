@@ -1,12 +1,12 @@
 # Site settings
 title: Bin
 SEOTitle: Bin
-header-img: 
+header-img: #显示在首页的背景图片
 email: binswms@gmail.com
 description: "乱七八糟的个人笔记."
-keyword: "Bin, Bin Blog"
+keyword: "Bin, Bin Blog" #关键词
 url: "http://binswm.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "/"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/binswm/binswm.github.io.git" # you code repository
 
 # Sidebar settings
