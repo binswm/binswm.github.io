@@ -7034,7 +7034,7 @@ button.close {
         position: fixed;
         bottom: 40px; /* 小按钮到浏览器底边的距离 */
         right: 60px; /* 小按钮到浏览器右边框的距离 */
-        color: rgba(20,20,20,0.45); /* 小按钮中文字的颜色 */
+        color: rgba(20,20,20,0.55); /* 小按钮中文字的颜色 */
         z-index: 1000;
         background: rgba(242,242,242,0.30); /* 小按钮底色 */
         padding: auto; /* 小按钮中文字到按钮边缘的距离 */
