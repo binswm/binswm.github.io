@@ -7040,7 +7040,7 @@ button.close {
         padding: auto; /* 小按钮中文字到按钮边缘的距离 */
         border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
         -moz-border-radius: 50px;
-        -webkit-border-radius: 1px;
+        -webkit-border-radius: 2px;
         font-weight: bold; /* 小按钮中文字的粗细 */
         text-decoration: none !important;
         box-shadow:1px 2px 6px rgba(0,0,0,0.05), 0 1px 0 #ffffff inset;
@@ -7079,4 +7079,7 @@ button.close {
     background: rgba(242,242,242,0.70); /* 小按钮的底色 */
     color: rgba(20,20,20,0.70); /* 文字颜色 */
     box-shadow:1px 2px 6px rgba(0,0,0,0.20), 0 1px 0 #ffffff inset;
+    border-radius: 50px; /* 小按钮圆角的弯曲程度（半径）*/
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 5px;
 }
