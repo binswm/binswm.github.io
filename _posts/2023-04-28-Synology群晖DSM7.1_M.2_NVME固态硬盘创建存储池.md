@@ -161,7 +161,9 @@ tags:
 
 ## 使用脚本将现有M.2_NVME固态硬盘添加进群晖的ssd兼容列表
 
-本方法使用脚本为：[Synology_M2_volume](https://github.com/007revad/Synology_M2_volume) / https://github.com/007revad/Synology_M2_volume
+本方法使用脚本为：
+
+<a title="https://github.com/007revad/Synology_M2_volume" href="https://github.com/007revad/Synology_M2_volume"  target="_blank" rel="noopener noreferrer">Synology_M2_volume</a>（https://github.com/007revad/Synology_M2_volume）
 
 此脚本可以非常方便的启用M.2_NVME作为存储，而且是在GUI界面操作不是命令行手动创建，只需运行脚本并键入`yes`和 `1`、`2`、`3` 或 `4` 来回答一些简单的问题。然后重新启动，转到存储管理器、在线组装和创建卷即可
 
