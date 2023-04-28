@@ -1,0 +1,183 @@
+---
+layout:     post
+title:      Synology | 群晖DSM7.1_M.2_NVME固态硬盘创建存储池
+subtitle:   使用机型DS1621+
+date:       2023-04-23
+author:     bin
+header-img: 
+catalog: true
+tags:
+    - Synology
+    - 群晖
+    - DSM
+    - M.2_NVME
+    - 存储池
+
+---
+
+
+
+**DS1621+在DSM7.2之前M.2口的ssd官方默认情况下是只能用作缓存使用的，升级到7.2之后支持M.2_NVME硬盘创建存储池了（本次新增支持M.2_NVME硬盘创建存储池的机型：DS1522+、DS1621+、DS1821+、DS1621xs+），但是官方限制了只能使用官方指定的群晖官方推出的M.2_NVME固态硬盘（例如：SNV3410-800G、SNV3410-400G的NVMe PCIe3.0x4 M.2 2280固态硬盘）。**
+
+本文也是参考网上许多成功和失败案例之后，自己动手执行后记录的
+
+开始之前先引用[spacer大佬](https://www.chiphell.com/forum.php?mod=viewthread&tid=2187138)对于群晖1621+，1821+之类的多盘位机型的几点说明和建议：
+
+- **不要犹豫，内存加满：**群晖的内存 swap 既充当了读缓存，所以不要犹豫，加到机型支持的最大内存。一般是 16X2= 32GB，买 ECC 的内存。注意部分内存有兼容性问题，大家可以回帖帮助群友买到合适内存。
+- **PCI-e 优先万兆，不要搞 SSD 缓存：**如果你的机型不支持新出的[E10M20-T1](https://www.synology.cn/zh-cn/products/E10M20-T1) SSD&万兆二合一卡，那 pci-e 优先加万兆网卡，为什么？往上看缓存的坑。
+- **如果盘位富裕，1号盘位建议用 sata SSD 代替：**群晖的机制是默认从1号盘位开始读系统，然后 app 的缓存都是默认放在存储空间 1 内的。通常情况下，HDD 做的 RAID 随机读写性能很一般。建议如果盘位够的用户（比如 1618+,1819+）之类的，可以考虑放个 SSD 到 1 号盘位，设定为basic存储空间，用于套件及及各类缓存。2-8 号盘位做 HDD RAID（RAID 6），这样的话，在日常使用，能显著提升系统的响应效能，比 nvme 缓存效率要高很多。
+
+
+
+# 正文：
+
+**执行以下操作之前如果ssd是正在用做缓存的，记得要在dsm按照步骤删除缓存盘**
+
+
+
+## 群晖DSM7.1使用M.2_NVME固态硬盘创建存储池有两种方法
+
+分别为：
+
+- **纯ssh命令创建储存池**
+
+- **使用脚本将现有M.2_NVME固态硬盘添加进群晖的ssd兼容列表后在群晖系统GUI界面直接执行创建储存池**
+
+
+
+## 纯ssh命令创建储存池
+
+1. 使用管理员账号临时获得-i权限（`sudo -i`）或直接使用root账号通过SSH登陆群晖
+
+2. 找出nvme设备：
+
+   ```
+   ls /dev/nvme*
+   ```
+
+   群晖插入两条NVME一般都会显示`/dev/nvme0n1`和`/dev/nvme1n1`
+
+   这里准备将1号插槽上的NVME作为储存空间传健储存池
+
+   
+
+3. 创建分区
+
+   先查看1号插槽上的NVME（`/dev/nvme0n1`）的磁盘信息：
+
+   ```
+   fdisk -l /dev/nvme0n1
+   ```
+
+   将1号插槽的NVME（`/dev/nvme0n1`）分区：
+
+   ```
+   synopartition --part /dev/nvme0n1 12
+   ```
+
+   然后会询问是否继续，输入`Y`确认执行分区操作
+
+   分区完之后再检查一下分区布局：
+
+   ```
+   fdisk -l /dev/nvme0n1
+   ```
+
+   此处应该就可以看到有三个分区，第三个空间最大的分区`/dev/nvme0n1p3`就是要用做储存空间的分区
+
+   
+
+4. 创建RAID阵列（储存池）：
+
+   因为这里只用一个SSD做为储存空间，所以这里会创建`Basic`储存池
+   首先查看当前RAID：
+
+   ```
+   cat /proc/mdstat
+   ```
+
+   ```
+   Personalities : [raid1] 
+   md6 : active raid1 sata5p5[0]
+         13661650816 blocks super 1.2 [1/1] [U]
+         
+   md5 : active raid1 sata4p5[0]
+         13661650816 blocks super 1.2 [1/1] [U]
+         
+   md3 : active raid1 sata3p5[0] sata2p5[1]
+         15615154816 blocks super 1.2 [2/2] [UU]
+         
+   md2 : active raid1 sata1p5[0]
+         3896291584 blocks super 1.2 [1/1] [U]
+         
+   md1 : active raid1 sata1p2[0] sata5p2[4] sata4p2[3] sata3p2[2] sata2p2[1]
+         2097088 blocks [6/5] [UUUUU_]
+         
+   md0 : active raid1 sata1p1[0] sata5p1[4] sata4p1[3] sata3p1[2] sata2p1[1]
+         8388544 blocks [6/5] [UUUUU_]
+   ```
+
+   其中`md0`是系统盘，`md1`是交换空间（此二项为分布在所有已插入群晖的所有硬盘上以虚拟raid1的形式存在的），从`md2`开始为本人自行创建的储存池，`md2`为第一盘位的sata口ssd（此处显示raid1，实际为shr），`md3`为第二第三盘位的两个hdd组成的shr（此处也显示为raid1），……，此时，正常情况下理应按顺序以`md7`标识为NVME创建新的储存池
+
+   创建新的RAID，使用md7作为标识：
+
+   ```
+   mdadm --create /dev/md7 --level=1 --raid-devices=1 --force /dev/nvme0n1p3
+   ```
+
+   其中`level=1`即`Basic`，`/dev/nvme0n1p3`为刚刚检查磁盘分区布局后看到的那个第三个空间最大的分区
+
+   然后会询问是否继续，输入`Y`确认执行创建新的RAID操作
+
+   
+
+5. 创建文件系统
+
+   在刚刚创建的`md7`RAID上建立`btrfs`或`ext4`文件系统（**强烈建议使用btrfs**：[什么是btrfs](https://www.synology.cn/zh-cn/dsm/Btrfs)）：
+
+   ```
+   mkfs.btrfs -f /dev/md7
+   ```
+
+   或
+
+   ```
+   mkfs.ext4 -F /dev/md4
+   ```
+
+   
+
+6. 重启群晖
+
+   ```
+   reboot
+   ```
+
+   
+
+7. 群晖重启完成后在储存管理器中就能看到刚刚创建的储存池了，但是显示错误，需要手动点击**`在线重组`**完成最后的创建，再执行后续创建储存空间的操作
+
+
+
+## 使用脚本将现有M.2_NVME固态硬盘添加进群晖的ssd兼容列表
+
+本方法使用脚本为：[Synology_M2_volume](https://github.com/007revad/Synology_M2_volume) / https://github.com/007revad/Synology_M2_volume
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+
+---
+
+## END
