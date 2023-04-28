@@ -15,7 +15,7 @@ tags:
 
 ---
 
-
+# 前言：
 
 **DS1621+在DSM7.2之前M.2口的ssd官方默认情况下是只能用作缓存使用的，升级到7.2之后支持M.2_NVME硬盘创建存储池了（本次新增支持M.2_NVME硬盘创建存储池的机型：DS1522+、DS1621+、DS1821+、DS1621xs+），但是官方限制了只能使用官方指定的群晖官方推出的M.2_NVME固态硬盘（例如：SNV3410-800G、SNV3410-400G的NVMe PCIe3.0x4 M.2 2280固态硬盘）。**
 
@@ -163,7 +163,7 @@ tags:
 
 本方法使用脚本为：[Synology_M2_volume](https://github.com/007revad/Synology_M2_volume) / https://github.com/007revad/Synology_M2_volume
 
-
+此脚本可以非常方便的启用M.2_NVME作为存储，而且是在GUI界面操作不是命令行手动创建，只需运行脚本并键入`yes`和 `1`、`2`、`3` 或 `4` 来回答一些简单的问题。然后重新启动，转到存储管理器、在线组装和创建卷即可
 
 
 
