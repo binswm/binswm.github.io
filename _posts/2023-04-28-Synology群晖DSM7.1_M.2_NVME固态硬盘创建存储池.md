@@ -169,6 +169,81 @@ tags:
 
 此脚本可以非常方便的启用M.2_NVME作为存储，而且是在GUI界面操作不是命令行手动创建，只需运行脚本并键入`yes`和 `1`、`2`、`3` 或 `4` 来回答一些简单的问题。然后重新启动，转到存储管理器、在线组装和创建卷即可
 
+**本脚本注意事项：**
+
+如果您想更新DSM，您的 M.2 硬盘显示为不受支持的硬盘存储池显示为丢失，并且提示存储损毁，您需要重新运行[Synology_HDD_db脚本](https://github.com/007revad/Synology_HDD_db)。Synology_HDD_db脚本应要在每次 DSM 更新后重新运行。
+
+**支持的 RAID 级别：**
+
+| RAID Level      | Drives Required  |
+| --------------- | ---------------- |
+| Single（basic） | 1 drive          |
+| RAID 0          | 2 or more drives |
+| RAID 1          | 2 or more drives |
+| RAID 5          | 3 or more drives |
+
+
+
+1. 使用管理员账号临时获得-i权限（`sudo -i`）或直接使用root账号通过SSH登陆群晖
+
+2. 把下载的脚本上传到群晖，执行脚本：
+
+   ```
+   sudo -i /volume1/public/script/syno_create_m2_volume.sh
+   ```
+
+   `/volume1/public/script/syno_create_m2_volume.sh`为脚本所在目录
+
+   脚本选项
+
+   ```
+   -a, --all        List all M.2 drives even if detected as active/列出所有M.2设备，即使检测为活动驱动器
+   -s, --steps      Show the steps to do after running this script/显示运行此脚本后要执行的步骤
+   -h, --help       Show this help message/显示帮助信息
+   -v, --version    Show the script version/显示脚本版本
+   ```
+
+
+
+
+3. **运行脚本后做什么：**
+
+   1. 重新启动 Synology NAS。
+
+   2. 转到存储管理器并选择在线组装：
+
+      - 存储池 > 可用池 > 在线重组
+
+   3. 像往常一样创建卷：
+
+      - 选择新的存储池 > 创建 > 创建卷。
+
+      - 设置分配的大小。
+
+        - （可选）输入卷描述。有创意:)
+
+      - 点击下一步。
+
+      - 选择文件系统（Btrfs 或 ext4）并单击下一步。
+
+      - （可选）启用
+
+        加密此卷
+
+        并单击下一步。
+
+        - 创建加密密码或输入您现有的加密密码。
+
+      - 确认您的设置并单击应用以完成创建 M.2 卷。
+
+   4. 可选择启用和安排 TRIM：
+
+      - 存储池 > ... > 设置 > SSD TRIM
+      - **注意：DSM 7.1.1。没有针对 M.2 存储池的 SSD TRIM 设置**
+      - **注意：DSM 7.2 Beta 没有针对 M.2 RAID 0 或 RAID 5 的 SSD TRIM 设置**
+
+
+
 
 
 
