@@ -182,7 +182,9 @@ tags:
 | RAID 1          | 2 or more drives |
 | RAID 5          | 3 or more drives |
 
+<br>
 
+--
 
 1. 使用管理员账号临时获得-i权限（`sudo -i`）或直接使用root账号通过SSH登陆群晖
 
