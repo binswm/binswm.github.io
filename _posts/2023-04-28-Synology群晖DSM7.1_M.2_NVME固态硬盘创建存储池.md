@@ -93,7 +93,7 @@ tags:
    fdisk -l /dev/nvme0n1
    ```
 
-   <a href="https://imgbox.com/89ysPTT6" target="_blank"><img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="image host" width="200px" style="float:left; margin: 5px;"/></a>
+   <a href="https://imgbox.com/89ysPTT6" target="_blank"><img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="image host" width="200px" style="float:left; margin: 5px"/></a><br>
 
    
 
