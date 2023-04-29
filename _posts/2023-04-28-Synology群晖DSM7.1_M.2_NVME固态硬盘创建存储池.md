@@ -57,11 +57,15 @@ tags:
 
    会显示：
 
-   <a href="https://imgbox.com/4TiMImYZ" target="_blank"><img src="https://thumbs2.imgbox.com/03/f7/4TiMImYZ_t.png" alt="image host" width="650px"/></a> 
+   <a href="https://imgbox.com/4TiMImYZ" target="_blank"><img src="https://thumbs2.imgbox.com/03/f7/4TiMImYZ_t.png" alt="image host" width="650px" align="left"/></a> 
+
+   <div style="clear:both;"></div>
 
    或
 
-   <a href="https://imgbox.com/dk5JPG7d" target="_blank"><img src="https://thumbs2.imgbox.com/1c/6c/dk5JPG7d_t.png" alt="image host" width="650px"/></a>
+   <a href="https://imgbox.com/dk5JPG7d" target="_blank"><img src="https://thumbs2.imgbox.com/1c/6c/dk5JPG7d_t.png" alt="image host" width="650px" align="left"/></a>
+   
+   <div style="clear:both;"></div>
 
    区别在于系统是否自动创建过一个后缀为`n1p1`的分区，好像是无所谓
 
