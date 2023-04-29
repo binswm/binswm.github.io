@@ -95,12 +95,14 @@ tags:
 
    <a href="https://imgbox.com/89ysPTT6" target="_blank"><img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="image host" width="200px"/></a>
 
-   <img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png#pic_left" alt="fq" style="zoom:67%;" />
-
-   此处应该就可以看到有三个分区，第三个空间最大的分区`/dev/nvme0n1p3`就是要用做储存  空间的分区
-
+   <div>
+   <img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="fq" style="zoom:67%;" />
+   </div>
    
-
+   此处应该就可以看到有三个分区，第三个空间最大的分区`/dev/nvme0n1p3`就是要用做储存  空间的分区
+   
+   
+   
 4. 创建RAID阵列（储存池）：
 
    因为这里只用一个SSD做为储存空间，所以这里会创建`Basic`储存池
