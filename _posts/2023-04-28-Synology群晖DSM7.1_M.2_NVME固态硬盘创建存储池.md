@@ -2,7 +2,7 @@
 layout:     post
 title:      Synology | 群晖DSM7.1_M.2_NVME固态硬盘创建存储池
 subtitle:   使用机型DS1621+
-date:       2023-04-23
+date:       2023-04-28
 author:     bin
 header-img: 
 catalog: true
