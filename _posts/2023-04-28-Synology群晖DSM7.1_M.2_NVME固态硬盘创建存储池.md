@@ -57,13 +57,13 @@ tags:
 
    会显示：
 
-   <a href="https://imgbox.com/4TiMImYZ" target="_blank"><img src="https://thumbs2.imgbox.com/03/f7/4TiMImYZ_t.png" alt="image host" width="650px" align="left"/></a> 
+   <a href="https://imgbox.com/4TiMImYZ" target="_blank"><img src="https://thumbs2.imgbox.com/03/f7/4TiMImYZ_t.png" alt="image host" width="600px" align="left"/></a> 
 
    <div style="clear:both;"></div>
 
    或
 
-   <a href="https://imgbox.com/dk5JPG7d" target="_blank"><img src="https://thumbs2.imgbox.com/1c/6c/dk5JPG7d_t.png" alt="image host" width="650px" align="left"/></a>
+   <a href="https://imgbox.com/dk5JPG7d" target="_blank"><img src="https://thumbs2.imgbox.com/1c/6c/dk5JPG7d_t.png" alt="image host" width="600px" align="left"/></a>
    
    <div style="clear:both;"></div>
 
@@ -252,6 +252,24 @@ tags:
 
 
 
+
+<br>
+
+<br>
+
+---
+
+参考文章：
+
+[Chiphell - neomelb - 继续折腾群晖DS1821+，NVMe SSD除了做缓存竟然还能这么玩！](https://www.chiphell.com/thread-2395056-1-1.html)
+
+[Chiphell - spacer - 专门开一贴，群晖硬软件的的各种坑及解决方案](https://www.chiphell.com/thread-2187138-1-1.html)
+
+[bilibili - VedioTalk - 直通NVME硬盘给群晖7.1当存储，黑白群晖均适用](https://www.bilibili.com/video/BV1za411S7x6/?vd_source=ed256bd486922278484767bd6cbe80c9)
+
+
+
+---
 
 <br>
 
