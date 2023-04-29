@@ -95,7 +95,7 @@ tags:
 
    <a href="https://imgbox.com/89ysPTT6" target="_blank"><img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="image host" width="200px"/></a>
 
-   [<img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="分区" style="zoom:67%;" />](https://imgbox.com/89ysPTT6)
+   ![fq](https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png#pic_left)
 
    此处应该就可以看到有三个分区，第三个空间最大的分区`/dev/nvme0n1p3`就是要用做储存  空间的分区
 
