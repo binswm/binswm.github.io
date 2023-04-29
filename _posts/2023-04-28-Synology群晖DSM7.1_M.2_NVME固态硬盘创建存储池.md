@@ -55,9 +55,19 @@ tags:
    ls /dev/nvme*
    ```
 
+   会显示：
+
+   <a href="https://imgbox.com/4TiMImYZ" target="_blank"><img src="https://thumbs2.imgbox.com/03/f7/4TiMImYZ_t.png" alt="image host" width="650px"/></a> 
+
+   或
+
+   <a href="https://imgbox.com/dk5JPG7d" target="_blank"><img src="https://thumbs2.imgbox.com/1c/6c/dk5JPG7d_t.png" alt="image host" width="650px"/></a>
+
+   区别在于系统是否自动创建过一个后缀为`n1p1`的分区，好像是无所谓
+
    群晖插入两条NVME一般都会显示`/dev/nvme0n1`和`/dev/nvme1n1`
 
-   这里准备将1号插槽上的NVME作为储存空间传健储存池
+   这里准备将1号插槽上的NVME作为储存空间传健储存池，所以本次只用到`/dev/nvme0n1`
 
    
 
@@ -82,6 +92,8 @@ tags:
    ```
    fdisk -l /dev/nvme0n1
    ```
+
+   <a href="https://imgbox.com/89ysPTT6" target="_blank"><img src="https://thumbs2.imgbox.com/5c/49/89ysPTT6_t.png" alt="image host" width="200px" /></a>
 
    此处应该就可以看到有三个分区，第三个空间最大的分区`/dev/nvme0n1p3`就是要用做储存空间的分区
 
