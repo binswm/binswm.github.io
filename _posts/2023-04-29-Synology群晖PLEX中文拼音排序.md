@@ -177,22 +177,6 @@ PLEX官方一直都不支持中文使用拼音首字母排序，所以有很多�
 
 <br>
 
----
-
-参考文章：
-
-<a href="https://www.chiphell.com/thread-2395056-1-1.html" target="_blank">Chiphell - neomelb - 继续折腾群晖DS1821+，NVMe SSD除了做缓存竟然还能这么玩！</a>
-
-<a href="https://www.chiphell.com/thread-2187138-1-1.html" target="_blank">Chiphell - spacer - 专门开一贴，群晖硬软件的的各种坑及解决方案</a>
-
-<a href="https://www.bilibili.com/video/BV1za411S7x6/?vd_source=ed256bd486922278484767bd6cbe80c9" target="_blank">bilibili - VedioTalk - 直通NVME硬盘给群晖7.1当存储，黑白群晖均适用</a>
-
-
-
----
-
-<br>
-
 
 ---
 
