@@ -19,6 +19,12 @@ tags:
 
 **DS1621+在DSM7.2之前M.2口的ssd官方默认情况下是只能用作缓存使用的，升级到7.2之后支持M.2_NVME硬盘创建存储池了（本次新增支持M.2_NVME硬盘创建存储池的机型：DS1522+、DS1621+、DS1821+、DS1621xs+），但是官方限制了只能使用官方指定的群晖官方推出的M.2_NVME固态硬盘（例如：SNV3410-800G、SNV3410-400G的NVMe PCIe3.0x4 M.2 2280固态硬盘）。**
 
+  
+
+还有一点，官方明确表示：“<font size="4" color="FireBrick"><u><b>DSM 操作系统无法安装在 M.2 SSD 上。若要成功安装 DSM， Synology NAS必须至少包含一个非 M.2 SSD的硬盘。</b></u></font>”
+
+  
+
 本文也是参考网上许多成功和失败案例之后，自己动手执行后记录的
 
 开始之前先引用[spacer大佬](https://www.chiphell.com/forum.php?mod=viewthread&tid=2187138)对于群晖1621+，1821+之类的多盘位机型的几点说明和建议：
