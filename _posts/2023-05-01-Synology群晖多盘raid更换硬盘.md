@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Synology | 群晖更换硬盘
-subtitle:   群晖更换硬盘
+title:      Synology | 群晖多盘raid更换硬盘
+subtitle:   群晖多盘raid更换硬盘
 date:       2023-05-01
 author:     bin
 header-img: 
@@ -34,7 +34,7 @@ tags:
 
 
 
-<center><b><i><font size="6.5">01</font></i>&nbsp;<font face="SimSun" size="4.5">有空余硬盘位时</font></b></center>
+<center><b><i><font size="6.5">01</font></i>&nbsp;<font face="SimSun" size="4.5">有空余硬盘位时raid更换硬盘</font></b></center>
 
 
 
